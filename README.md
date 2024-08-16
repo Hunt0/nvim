@@ -1,4 +1,7 @@
-# 💤 LazyVim
+# Neovim/Lazy Vim setup
 
-A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
-Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
+## Requires
+- Neovim >= 0.9.0
+- C compiler for nvim treesitter
+- Nerd font for icons with version >= 3.0.0
+- Heaps of patience for getting it to work right
