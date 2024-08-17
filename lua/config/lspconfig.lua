@@ -1,12 +1,9 @@
 local lspconfig = require("lspconfig")
-local rust_tools = require("rust-tools")
 
-lspconfig.rust_analyzer.setup({})
-rust_tools.setup({
-  tools = {
-    inlay_hints = {
-      auto = false,
-      show_parameter_hints = false,
-    },
+lspconfig.rust_analyzer.setup({
+  inlay_hints = {
+    type_hints = { enabled = false },
+    parameter_hints = { enabled = false },
+    enabled = false,
   },
 })
