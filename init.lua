@@ -1,6 +1,3 @@
--- bootstrap lazy.nvim, LazyVim and your plugins
-require("config.lazy")
-
 vim.opt.relativenumber = true
 vim.opt.number = true
 vim.opt.autoindent = true
@@ -12,6 +9,8 @@ vim.opt.smartcase = true
 vim.opt.incsearch = true
 vim.opt.wrapscan = true
 vim.opt.conceallevel = 0
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
 
 vim.keymap.set("i", "kj", "<Esc>", { noremap = true })
 vim.keymap.set("n", "<localleader>f", ":b<SPACE>")
@@ -22,6 +21,9 @@ vim.keymap.set("n", "<localleader>k", "O<Esc>")
 vim.keymap.set("n", "<localleader>cwd", ":cd %:p:h")
 
 --[[
+--
+--
+
 map <leader>j o<Esc>
 map <leader>k O<Esc>
 mmap <leader>j o<Esc>

@@ -1,3 +1,0 @@
-return {
-  "timonv/vim-cargo",
-}
