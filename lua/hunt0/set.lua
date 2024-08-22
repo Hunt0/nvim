@@ -1,4 +1,3 @@
-
 vim.opt.relativenumber = true
 vim.opt.number = true
 vim.opt.tabstop = 4
@@ -12,5 +11,6 @@ vim.opt.wildignorecase = true
 vim.opt.smartcase = true
 vim.opt.incsearch = true
 vim.opt.wrapscan = true
+vim.opt.wrap = false
 vim.opt.termguicolors = true
 vim.opt.conceallevel = 0

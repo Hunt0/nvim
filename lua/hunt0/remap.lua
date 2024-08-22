@@ -1,5 +1,3 @@
-
-
 vim.keymap.set("i", "kj", "<Esc>", { noremap = true })
 vim.keymap.set("n", "<localleader>f", ":b<SPACE>")
 vim.keymap.set("n", "<localleader>b", ":b#")
