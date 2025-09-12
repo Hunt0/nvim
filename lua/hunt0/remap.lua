@@ -10,3 +10,5 @@ vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { noremap = true })
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { noremap = true })
 vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { noremap = true })
 vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { noremap = true })
+
+vim.keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<cr>")
