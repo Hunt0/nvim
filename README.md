@@ -1,5 +1,5 @@
-### Based off (subset) of the <small>[Primeagen Setup](https://github.com/ThePrimeagen/init.lua)</small>
+### Requirements
 
-- requires ripgrep
-- requires C/C++ compiler (zig recommended)
+- ripgrep
+- C/C++ compiler
 
