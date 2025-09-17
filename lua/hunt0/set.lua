@@ -17,6 +17,7 @@ vim.opt.conceallevel = 0
 vim.opt.termguicolors = true
 
 -- ONLY FOR WINDOWS + GIT BASH
+vim.opt.shellslash = true
 if (os.getenv("SHELL") and os.getenv("SHELL"):find("bash")) then
     vim.opt.shell = [["C:\Users\brandon.hunt\AppData\Local\Programs\Git\bin\bash.exe"]]
     vim.opt.shellcmdflag = "-c"
