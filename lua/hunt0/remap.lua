@@ -11,5 +11,8 @@ vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { noremap = true })
 vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { noremap = true })
 vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { noremap = true })
 
+vim.keymap.set("x", "p", '"_dP')
+vim.keymap.set("x", "P", '"_dP')
+
 vim.keymap.set("n", "GD", "<cmd>lua vim.lsp.buf.definition()<cr>")
 vim.keymap.set("n", "<leader>i", vim.lsp.buf.code_action, { desc = "Code Action (fix imports, etc.)" })
