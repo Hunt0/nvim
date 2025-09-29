@@ -27,7 +27,7 @@ return {
             ensure_installed = {
                 "lua_ls",
                 "omnisharp",
-                "tsserver"
+                "tsserver",
             },
             handlers = {
                 function(server_name) -- default handler (optional)
@@ -54,6 +54,10 @@ return {
                         capabilities = capabilities,
                         cmd = { "omnisharp" },
                         enable_import_completion = true,
+                        root_dir = function(fname)
+                            local util = require("lspconfig.util")
+                            return util.root_pattern("*.sln", "*.slnx")(fname) or util.path.dirname(fname)
+                        end,
                         organize_imports_on_format = true,
                         enable_roslyn_analyzers = true,
                         settings = {
