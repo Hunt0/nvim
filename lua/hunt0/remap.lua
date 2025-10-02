@@ -15,4 +15,5 @@ vim.keymap.set("x", "p", '"_dP')
 vim.keymap.set("x", "P", '"_dP')
 
 vim.keymap.set("n", "GD", "<cmd>lua vim.lsp.buf.definition()<cr>")
+vim.keymap.set("n", "ogd", "<cmd>lua require('omnisharp_extended').lsp_definition()<cr>")
 vim.keymap.set("n", "<leader>i", vim.lsp.buf.code_action, { desc = "Code Action (fix imports, etc.)" })
