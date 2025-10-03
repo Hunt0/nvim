@@ -7,6 +7,11 @@ return {
                 enableOnVimEnter = true,
                 enableOnTabEnter = true,
                 disableOnVimLeave = true,
+            },
+            buffers = {
+                scratchPad = {
+                    enabled = false,
+                }
             }
         })
     end
