@@ -40,7 +40,7 @@ end, { desc = "Live Grep (Telescope)" })
 
 vim.keymap.set("n", "<leader>i", vim.lsp.buf.code_action, { desc = "Code Action (fix imports, etc.)" })
 
-vim.keymap.set('i', '<C-Y>', 'copilot#Accept("\\<CR>")', {
+vim.keymap.set('i', '<C-J>', 'copilot#Accept("\\<CR>")', {
     expr = true,
     replace_keycodes = false
 })
