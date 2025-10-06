@@ -39,3 +39,10 @@ vim.keymap.set("n", "<leader>fw", function()
 end, { desc = "Live Grep (Telescope)" })
 
 vim.keymap.set("n", "<leader>i", vim.lsp.buf.code_action, { desc = "Code Action (fix imports, etc.)" })
+
+vim.keymap.set('i', '<C-Y>', 'copilot#Accept("\\<CR>")', {
+    expr = true,
+    replace_keycodes = false
+})
+
+vim.g.copilot_no_tab_map = true
