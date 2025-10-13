@@ -29,6 +29,7 @@ return {
                 "lua_ls",
                 "omnisharp",
                 "ts_ls",
+                "jsonls"
             },
             handlers = {
                 function(server_name) -- default handler (optional)

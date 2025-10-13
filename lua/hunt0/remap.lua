@@ -27,7 +27,7 @@ vim.keymap.set("n", "<leader>ogd", function()
 end, { desc = "Go to Definition (OmniSharp Extended)" })
 
 vim.keymap.set("n", "<leader>gr", function()
-  require("telescope.builtin").lsp_references()
+  require("telescope.builtin").lsp_references({ fname_width = 120 })
 end, { noremap = true, silent = true, desc = "LSP References (Telescope)" })
 
 vim.keymap.set("n", "<leader>ff", function()
