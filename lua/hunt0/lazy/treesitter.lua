@@ -6,7 +6,11 @@ return {
             ensure_installed = {
                 "lua",
                 "rust",
-                "bash"
+                "bash",
+                "javascript",
+                "typescript",
+                "tsx",
+                "c_sharp"
             },
             sync_install = false,
             auto_install = false,
