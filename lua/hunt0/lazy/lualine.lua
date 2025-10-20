@@ -11,7 +11,19 @@ return {
                     }
                 },
                 lualine_b = {},
-                lualine_c = {},
+                lualine_c = {
+                    {
+                        function()
+                            local reg = vim.fn.reg_recording()
+                            if reg == '' then
+                                return ''
+                            else
+                                return 'Recording @' .. reg
+                            end
+                        end,
+                        color = { fg = '#ff9e64', gui = 'bold' },
+                    },
+                },
                 lualine_x = {},
                 lualine_y = { { 'progress' } },
                 lualine_z = { { 'location' } },
