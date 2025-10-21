@@ -14,6 +14,7 @@ vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { noremap = true })
 vim.keymap.set("x", "p", '"_dP')
 vim.keymap.set("x", "P", '"_dP')
 
+-- LSP
 vim.keymap.set("n", "<leader>gd", function()
     vim.lsp.buf.definition()
 end, { desc = "Go to Definition" })
@@ -26,23 +27,4 @@ vim.keymap.set("n", "<leader>ogd", function()
     require("omnisharp_extended").lsp_definition()
 end, { desc = "Go to Definition (OmniSharp Extended)" })
 
-vim.keymap.set("n", "<leader>gr", function()
-  require("telescope.builtin").lsp_references({ fname_width = 120 })
-end, { noremap = true, silent = true, desc = "LSP References (Telescope)" })
-
-vim.keymap.set("n", "<leader>ff", function()
-    require("telescope.builtin").find_files()
-end, { desc = "Find Files (Telescope)" })
-
-vim.keymap.set("n", "<leader>fw", function()
-    require("telescope.builtin").live_grep()
-end, { desc = "Live Grep (Telescope)" })
-
 vim.keymap.set("n", "<leader>i", vim.lsp.buf.code_action, { desc = "Code Action (fix imports, etc.)" })
-
-vim.keymap.set('i', '<C-J>', 'copilot#Accept("\\<CR>")', {
-    expr = true,
-    replace_keycodes = false
-})
-
-vim.g.copilot_no_tab_map = true
