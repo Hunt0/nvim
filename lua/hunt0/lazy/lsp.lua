@@ -11,7 +11,7 @@ return {
         "L3MON4D3/LuaSnip",
         "saadparwaiz1/cmp_luasnip",
         "j-hui/fidget.nvim",
-        "Hoffs/omnisharp-extended-lsp.nvim"
+        "seblyng/roslyn.nvim"
     },
     config = function()
         local cmp = require('cmp')
@@ -23,13 +23,18 @@ return {
             cmp_lsp.default_capabilities())
 
         require("fidget").setup({})
-        require("mason").setup()
+        require("mason").setup({
+            registries = {
+                "github:mason-org/mason-registry",
+                "github:Crashdummyy/mason-registry",
+            },
+        })
         require("mason-lspconfig").setup({
             ensure_installed = {
                 "lua_ls",
-                "omnisharp",
                 "ts_ls",
-                "jsonls"
+                "jsonls",
+                "roslyn"
             },
             handlers = {
                 function(server_name) -- default handler (optional)
@@ -50,26 +55,6 @@ return {
                             }
                         }
                     }
-                end,
-                ["omnisharp"] = function()
-                    require("lspconfig").omnisharp.setup {
-                        capabilities = capabilities,
-                        cmd = { "omnisharp" },
-                        enable_import_completion = true,
-                        root_dir = function(fname)
-                            local util = require("lspconfig.util")
-                            return util.root_pattern("*.sln", "*.slnx")(fname) or util.path.dirname(fname)
-                        end,
-                        organize_imports_on_format = true,
-                        enable_roslyn_analyzers = true,
-                        settings = {
-                            FormattingOptions = {
-                                enableEditorConfigSupport = true,
-                                OrganizeImports = true,
-                            },
-                        },
-                    }
-
                 end,
             }
         })
