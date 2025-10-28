@@ -61,7 +61,7 @@ return {
                             return util.root_pattern("*.sln", "*.slnx")(fname) or util.path.dirname(fname)
                         end,
                         organize_imports_on_format = true,
-                        enable_roslyn_analyzers = true,
+                        --enable_roslyn_analyzers = true,
                         settings = {
                             FormattingOptions = {
                                 enableEditorConfigSupport = true,
