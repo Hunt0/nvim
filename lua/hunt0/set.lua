@@ -11,7 +11,6 @@ vim.opt.smartcase = true
 vim.opt.incsearch = true
 vim.opt.wrapscan = true
 vim.opt.wrap = false
-vim.opt.termguicolors = true
 vim.opt.conceallevel = 0
 vim.opt.termguicolors = true
 
