@@ -7,7 +7,8 @@ return {
                 lualine_a = {
                     {
                         'filename',
-                        path = 1
+                        path = 1,
+                        color = { fg = '#000000' }
                     }
                 },
                 lualine_b = {},
@@ -26,7 +27,12 @@ return {
                 },
                 lualine_x = {},
                 lualine_y = { { 'progress' } },
-                lualine_z = { { 'location' } },
+                lualine_z = {
+                    {
+                        'location',
+                        color = { fg = '#000000' }
+                    }
+                },
             },
             inactive_sections = {
                 lualine_a = {

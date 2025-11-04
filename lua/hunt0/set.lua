@@ -14,6 +14,8 @@ vim.opt.wrap = false
 vim.opt.conceallevel = 0
 vim.opt.termguicolors = true
 
+vim.cmd("colorscheme ic_orange_ppl")
+
 -- ONLY FOR WINDOWS + GIT BASH
 if vim.loop.os_uname().sysname == "Windows_NT" then
     vim.opt.shellslash = true
