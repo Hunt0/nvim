@@ -2,29 +2,29 @@
 -- Matches the Ghostty theme palette
 
 local colors = {
-  black        = "#000000",
-  red          = "#c13900",
-  green        = "#a4a900",
-  yellow       = "#caaf00",
-  blue         = "#bd6d00",
-  magenta      = "#fc5e00",
-  cyan         = "#f79500",
-  white        = "#ffc88a",
-  bright_black = "#6a4f2a",
-  bright_red   = "#ff8c68",
-  bright_green = "#f6ff40",
-  bright_yellow= "#ffe36e",
-  bright_blue  = "#ffbe55",
-  bright_magenta = "#fc874f",
-  bright_cyan  = "#c69752",
-  bright_white = "#fafaff",
-
-  bg           = "#262626",
-  fg           = "#ffcb83",
-  cursor       = "#fc531d",
-  cursor_text  = "#ffc88a",
-  selection_bg = "#c14020",
-  selection_fg = "#ffc88a",
+    black = "#000000",
+    red = "#c13900",
+    green = "#a4a900",
+    yellow = "#caaf00",
+    blue = "#bd6d00",
+    magenta = "#fc5e00",
+    cyan = "#f79500",
+    white = "#ffc88a",
+    bright_black = "#6a4f2a",
+    bright_red = "#ff8c68",
+    bright_green = "#f6ff40",
+    bright_yellow = "#ffe36e",
+    bright_blue = "#ffbe55",
+    bright_magenta = "#fc874f",
+    bright_cyan = "#c69752",
+    bright_white = "#fafaff",
+    comment = "#946e44",
+    bg = "#262626",
+    fg = "#ffcb83",
+    cursor = "#fc531d",
+    cursor_text = "#ffc88a",
+    selection_bg = "#c14020",
+    selection_fg = "#ffc88a",
 }
 
 vim.cmd("hi clear")
@@ -48,7 +48,7 @@ hi("ColorColumn",   { bg = "#333333" })
 hi("Visual",        { fg = colors.selection_fg, bg = colors.selection_bg })
 hi("LineNr",        { fg = colors.bright_black, bg = colors.bg })
 hi("CursorLineNr",  { fg = colors.yellow, bold = true })
-hi("Comment",       { fg = colors.bright_black, italic = true })
+hi("Comment",       { fg = colors.comment, italic = true })
 hi("Constant",      { fg = colors.bright_yellow })
 hi("String",        { fg = colors.bright_green })
 hi("Character",     { fg = colors.bright_green })
