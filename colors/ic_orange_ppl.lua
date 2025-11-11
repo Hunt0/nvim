@@ -21,6 +21,7 @@ local colors = {
     comment = "#946e44",
     bg = "#262626",
     fg = "#ffcb83",
+    --fg = "#fcd9a9", // slightly lighter
     cursor = "#fc531d",
     cursor_text = "#ffc88a",
     selection_bg = "#c14020",
@@ -41,13 +42,17 @@ end
 
 hi("Normal",        { fg = colors.fg, bg = "none" })
 hi("NormalNC",      { fg = colors.fg, bg = "none" })
+hi("SignColumn",    { bg = "none" })           -- no solid gutter
+hi("FoldColumn",    { bg = "none" })
+hi("EndOfBuffer",   { bg = "none" })
+
 hi("Cursor",        { fg = colors.cursor_text, bg = colors.cursor })
 hi("CursorLine",    { bg = "#2e2e2e" })
 hi("CursorColumn",  { bg = "#2e2e2e" })
 hi("ColorColumn",   { bg = "#333333" })
 hi("Visual",        { fg = colors.selection_fg, bg = colors.selection_bg })
-hi("LineNr",        { fg = colors.bright_black, bg = colors.bg })
-hi("CursorLineNr",  { fg = colors.yellow, bold = true })
+hi("LineNr",        { fg = colors.bright_black, bg = "none" })
+hi("CursorLineNr",  { fg = colors.yellow, bg = "none", bold = true })
 hi("Comment",       { fg = colors.comment, italic = true })
 hi("Constant",      { fg = colors.bright_yellow })
 hi("String",        { fg = colors.bright_green })
@@ -111,21 +116,33 @@ hi("TroubleHint",        { fg = colors.bright_blue })
 hi("TroubleOther",       { fg = colors.bright_magenta })
 
 -- Make the background consistent
-hi("TroublePreview",     { bg = "#2b2b2b" })
+hi("TroublePreview",     { bg = "none" })
 hi("TroubleLspPos",      { fg = colors.bright_black })
 
 -- Trouble.nvim background fix
-hi("TroubleNormal",  { fg = colors.fg, bg = colors.bg })
-hi("TroubleNormalNC",{ fg = colors.fg, bg = colors.bg })
+hi("TroubleNormal",  { fg = colors.fg, bg = "none" })
+hi("TroubleNormalNC",{ fg = colors.fg, bg = "none" })
 
-hi("TroublePreview", { fg = colors.fg, bg = colors.bg })
-hi("TroubleIndent",  { fg = colors.bright_black, bg = colors.bg })
-hi("TroubleFoldIcon",{ fg = colors.bright_black, bg = colors.bg })
+hi("TroublePreview", { fg = colors.fg, bg = "none" })
+hi("TroubleIndent",  { fg = colors.bright_black, bg = "none" })
+hi("TroubleFoldIcon",{ fg = colors.bright_black, bg = "none" })
 
 
 -- Make directory paths use primary orange
-hi("Directory", { fg = colors.bright_magenta, bg = colors.bg, bold = true })
+hi("Directory", { fg = colors.bright_magenta, bg = "none", bold = true })
 
 hi("TelescopePath", { fg = colors.bright_magenta })
 
 hi("TroubleFilename", { fg = colors.bright_magenta, bold = true })
+
+-- Treesitter highlights
+hi("@variable",      { fg = colors.fg })
+hi("@property",      { fg = colors.fg })
+hi("@parameter",     { fg = colors.fg })
+hi("@field",         { fg = colors.fg })
+hi("@function.call", { fg = colors.fg })
+
+hi("@punctuation",           { fg = colors.fg })
+hi("@punctuation.delimiter", { fg = colors.fg })
+hi("@punctuation.bracket",   { fg = colors.fg })
+hi("@punctuation.special",   { fg = colors.fg })
