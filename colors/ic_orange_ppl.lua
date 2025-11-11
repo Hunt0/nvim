@@ -24,7 +24,8 @@ local colors = {
     --fg = "#fcd9a9", // slightly lighter
     cursor = "#fc531d",
     cursor_text = "#ffc88a",
-    selection_bg = "#c14020",
+    --selection_bg = "#c14020",
+    selection_bg = "#77230e",
     selection_fg = "#ffc88a",
 }
 
@@ -130,9 +131,7 @@ hi("TroubleFoldIcon",{ fg = colors.bright_black, bg = "none" })
 
 -- Make directory paths use primary orange
 hi("Directory", { fg = colors.bright_magenta, bg = "none", bold = true })
-
 hi("TelescopePath", { fg = colors.bright_magenta })
-
 hi("TroubleFilename", { fg = colors.bright_magenta, bold = true })
 
 -- Treesitter highlights

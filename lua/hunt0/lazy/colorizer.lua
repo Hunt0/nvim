@@ -2,8 +2,6 @@ return {
     "norcalli/nvim-colorizer.lua",
     opts = { },
     config = function()
-        require("colorizer").setup({
-            html = { names = false }
-        })
+        require("colorizer").setup()
     end,
 }

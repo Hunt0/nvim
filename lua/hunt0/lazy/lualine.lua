@@ -8,29 +8,31 @@ return {
                     {
                         'filename',
                         path = 1,
-                        color = { fg = '#000000' }
+                        color = function()
+                            -- check current mode
+                            if vim.fn.mode() == 'n' then
+                                return { fg = '#ffcb83' }   -- Insert mode color
+                            else
+                                return { fg = '#262626' }   -- Default color for all other modes
+                            end
+                        end
                     }
                 },
                 lualine_b = {},
-                lualine_c = {
-                    {
-                        function()
-                            local reg = vim.fn.reg_recording()
-                            if reg == '' then
-                                return ''
-                            else
-                                return 'Recording @' .. reg
-                            end
-                        end,
-                        color = { fg = '#ff9e64', gui = 'bold' },
-                    },
-                },
+                lualine_c = {},
                 lualine_x = {},
                 lualine_y = { { 'progress' } },
                 lualine_z = {
                     {
                         'location',
-                        color = { fg = '#000000' }
+                        color = function()
+                            -- check current mode
+                            if vim.fn.mode() == 'i' then
+                                return { fg = '#ffcb83' }   -- Insert mode color
+                            else
+                                return { fg = '#262626' }   -- Default color for all other modes
+                            end
+                        end
                     }
                 },
             },
