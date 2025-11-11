@@ -121,5 +121,7 @@ return {
         end, { desc = "Go to Definition (OmniSharp Extended)" })
 
         vim.keymap.set("n", "<leader>i", vim.lsp.buf.code_action, { desc = "Code Action (fix imports, etc.)" })
+
+        vim.api.nvim_create_user_command('Lr', 'LspRestart', {})
     end
 }
