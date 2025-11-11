@@ -39,8 +39,8 @@ local hi = function(group, opts)
   vim.api.nvim_set_hl(0, group, opts)
 end
 
-hi("Normal",        { fg = colors.fg, bg = colors.bg })
-hi("NormalNC",      { fg = colors.fg, bg = colors.bg })
+hi("Normal",        { fg = colors.fg, bg = "none" })
+hi("NormalNC",      { fg = colors.fg, bg = "none" })
 hi("Cursor",        { fg = colors.cursor_text, bg = colors.cursor })
 hi("CursorLine",    { bg = "#2e2e2e" })
 hi("CursorColumn",  { bg = "#2e2e2e" })
